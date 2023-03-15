@@ -16,12 +16,15 @@ const authenticatedUser = (username,password)=>{ //returns boolean
 //only registered users can login
 regd_users.post("/login", (req,res) => {
   //Write your code here
+  // console.log(req);
+  res.json({message:"Customer successfully logged in"})
   return res.status(300).json({message: "Yet to be implemented"});
 });
 
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
   //Write your code here
+  res.send(req.body)
   return res.status(300).json({message: "Yet to be implemented"});
 });
 

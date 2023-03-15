@@ -12,6 +12,10 @@ app.use("/customer",session({secret:"fingerprint_customer",resave: true, saveUni
 
 app.use("/customer/auth/*", function auth(req,res,next){
 //Write the authenication mechanism here
+// console.log(req);
+// console.log(req.params);
+res.send(req.params[0])
+next()
 });
  
 const PORT =5000;
